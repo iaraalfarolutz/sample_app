@@ -2,7 +2,7 @@
 notification :libnotify
 
 # Defines the matching rules for Guard.
-guard :minitest, spring: "bin/rails test", all_on_start: false do
+guard :minitest, spring: "bin/rails test", all_on_start: false do #Evita que revise todo de nuevo
   watch(%r{^test/(.*)/?(.*)_test\.rb$})
   watch('test/test_helper.rb') { 'test' }
   watch('config/routes.rb')    { integration_tests }
